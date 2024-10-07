@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vox Pupuli - Behind every successful open source project is a vibrant community</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      @font-face {
+        font-family: "Yanone Kaffeesatz";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Yanone Kaffeesatz Regular"),
+          local("YanoneKaffeesatz-Regular"),
+          url(YDAoLskQQ5MOAgvHUQCcLbvy90DtE_Pg_qiF9bHvTzw.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Ubuntu Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Ubuntu Mono Regular"), local("UbuntuMono-Regular"),
+          url(ViZhet7Ak-LRXZMXzuAfkZ0EAVxt0G0biEntp43Qt6E.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Droid Serif";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Droid Serif Regular"), local("DroidSerif-Regular"),
+          url(0AKsP294HTD-nvJgucYTaJ0EAVxt0G0biEntp43Qt6E.ttf)
+            format("truetype");
+      }
+      @font-face {
+        font-family: "Nunito Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Nunito Sans Regular"), local("NunitoSans-Regular"),
+          url(NunitoSans-Regular.ttf)
+            format("truetype");
+      }
+      body {
+        font-family: "Nunito Sans";
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Yanone Kaffeesatz";
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content {
+        background-image: url(blue-skies.jpg);
+        background-size: cover;
+        font-size: 26px;
+      }
+      .remark-slide-content h1 {
+        font-size: 3em;
+      }
+      .remark-slide-content h2 {
+        font-size: 2em;
+      }
+      .remark-slide-content h3 {
+        font-size: 1.6em;
+      }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li p {
+        line-height: 1.25em;
+      }
+      .red {
+        color: #fa0000;
+      }
+      .large {
+        font-size: 2em;
+      }
+      a,
+      a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        -moz-border-radius: 5px;
+        -web-border-radius: 5px;
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code,
+      .remark-inline-code {
+        font-family: "Ubuntu Mono";
+      }
+      .remark-code-line-highlighted {
+        background-color: #373832;
+      }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverseold {
+        background: #09194F;
+        background-image: url(dots.png), url(BD_Wortmarke_weiss.png);
+        background-repeat: no-repeat;
+        background-position: top 12px left 20px, top 12px right 20px;
+        background-size: 30%, 10%;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverseold h1,
+      .inverseold h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      .inverse, .inversedoubleheading {
+        background: #09194F;
+        background-image: url(dots.png), url(BD_Wortmarke_weiss.png), url(circle.png);
+        background-repeat: no-repeat;
+        background-position: top 12px left 20px, top 12px right 20px, center center;
+        background-size: 30%, 10%, 50%;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1,
+      .inverse h2,
+      .inversedoubleheading h1,
+      .inversedoubleheading h2 {
+        color: #f3f3f3;
+      }
+      .inverse h2 {
+        line-height: 0.8em;
+        margin-top: 0.8em;
+      }
+      .inverse h1 {
+        margin-top: 0em;
+        line-height: 1.1em;
+      }
+      .inversedoubleheading h1 {
+        margin-top: -1em;
+        line-height: 1.1em;
+      }
+      .inversedoubleheading h2 {
+        line-height: 0.8em;
+        margin-top: 0.8em;
+      }
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top: 151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first,
+      #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+      /* Two-column layout */
+      .puppetlogo img {
+        width: 95%;
+      }
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+      .left-column h2:last-of-type,
+      .left-column h3:last-child {
+        color: #000;
+      }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .right-column .something img {
+        width: 100%;
+        height: 550px;
+      }
+      .right-column .smallimg img {
+        width: 90%;
+      }
+      .right-column .nowidth img {
+        width: auto;
+      }
+      .right-column-center {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+        text-align: center;
+      }
+      .right-column img {
+        width: 100%;
+      }
+      @page {
+        size: 1920px 1080px;
+        margin: 0;
+      }
+      @media print {
+        .remark-slide-scaler {
+          width: 100% !important;
+          height: 100% !important;
+          transform: scale(1) !important;
+          top: 0 !important;
+          left: 0 !important;
+          size: 1920px 1080px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverseold
+
+# Vox Pupuli - Wie man eine Open Source Community<br> aufbaut und lebendig hält
+
+---
+
+class: center, middle, inverseold
+
+# Vox Pupuli - Wie man eine Open Source Community<br> aufbaut und lebendig hält
+## Wie man eine Community auf über 210 Mitglieder und über 300 Projekte skaliert
+
+---
+
+## $ whoami
+<img src="bastelfreak2.jpg" alt="drawing" style="float: right;width: 400px;"/>
+
+* Tim 'bastelfreak' Meusel
+
+* Bei [Vox Pupuli](https://voxpupuli.org/) aktiv seit 2015
+
+* Für einen sehr kleinen lokalen Hoster gearbeitet
+
+* Vox Pupuli (PMC)
+
+* Wohnhaft in Köln
+
+* Senior IT Automation Consultant für [betadots](https://betadots.de/)
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+???
+
+* who has seen this picture before because I reviewed/merged your pull request?
+
+---
+
+class: center, middle, inverse
+
+# Was ist<br/> Puppet?
+
+???
+
+* Who knows Puppet or worked with it?
+---
+
+.left-column[
+## Puppet
+### What?
+]
+
+.right-column[
+* Infrastructure as Code (IaC) Software
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+count: false
+.left-column[
+## Puppet
+### What?
+]
+
+.right-column[
+* Infrastructure as Code (IaC) Software
+
+* Eigene deklarative Sprache, Puppet DSL
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Alternatives like Salt/Ansible don't, they are mostly YAML
+---
+count: false
+.left-column[
+## Puppet
+### What?
+]
+
+.right-column[
+* Infrastructure as Code (IaC) Software
+
+* Eigene deklarative Sprache, Puppet DSL
+
+* Erfunden/entwickelt von Puppet Inc (jetzt Perforce)
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+count: false
+.left-column[
+## Puppet
+### What?
+]
+
+.right-column[
+* Infrastructure as Code (IaC) Software
+
+* Eigene deklarative Sprache, Puppet DSL
+
+* Erfunden/entwickelt von Puppet Inc (jetzt Perforce)
+
+* Apache 2 Lizenz (mit CLA)
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+.left-column[
+## Puppet
+### What?
+### How?
+]
+
+.right-column[
+Beispiel Klasse für nginx
+```puppet
+\# @summary configures nginx in a bad way
+\# @param content the whole nginx config
+class nginx (
+  Sensitive[String[1]] $content,
+) {
+  package { 'nginx':
+    ensure => 'installed',
+  }
+  -> file { '/etc/nginx/nginx.conf':
+    ensure  => 'file',
+    content => $content,
+  }
+  ~> service { 'nginx':
+    ensure => 'running',
+    enable => true,
+  }
+}
+```
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* example class of three resources. A resources describes one specific thing on a system
+
+---
+.left-column[
+## Puppet
+### What?
+### How?
+]
+
+.right-column[
+* Ein oder mehrere Klassen bilden ein Puppet Modul
+
+  * glorifiziertes .tar.gz Archiv
+
+* Ähnlich eines Ruby Gems oder Python Paketes
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Puppet
+### What?
+### How?
+]
+
+.right-column[
+* Ein oder mehrere Klassen bilden ein Puppet Modul
+
+  * glorifiziertes .tar.gz Archiv
+
+* Ähnlich eines Ruby Gems oder Python Paketes
+
+* Meistens lebt ein Modul in einem Git(Hub) Repo
+
+* Ein Modul verwaltet eine Software Komponente
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* grouping resources based on software component makes modules exchangeable and composable!
+---
+class: center, middle, inverse
+
+# Who uses<br> Open Source Software?
+
+???
+
+* easy question as a warm up
+---
+class: center, middle, inverse
+
+# Who tried to<br> report a Bug?
+
+???
+
+* Among this group, who wanted to report a bug or provide a patch?
+---
+class: center, middle, inverse
+
+# Who uses dead<br> Open Source Software?
+
+???
+
+* Wer hat während des bugreports gemerkt dass das projekt nur einer person gehört die seit 3 jahren nichts mehr daran gemacht hat?
+
+You might guess where this is going
+---
+class: center, middle, inverse
+
+# What is this<br/> Vox Pupuli thingy?
+
+???
+Now a question I will try to answer for you, what is vox pupuli
+
+* Who heard about it before?
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+Some stats. A group that:
+* 150 Puppet modules in 2021. 190 *active* modules at the moment
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* 43 Ruby Gems in 2021, 54 *active* gems at the moment
+---
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+
+* Freundliche und hilfsbereite Community
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We've a code of conduct at least since 2016 and had a single violation
+
+* A person wasn't polite to a few others
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+
+* Freundliche und hilfsbereite Community
+
+* Aufgeschlossen für neue Mitglieder und Technologien
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+* new people are always welcome and it's easy to participate
+* usually interact via IRC or via GitHub issues and pull requests
+* Puppet/Perforce has a slack community. Our slack room is bridged with our IRC channel
+* technology: example conversation: Hey can I add gentoo support to a module? Or Arch Linux support?
+
+* domain specific experts
+
+* Any fellow Arch Linux friends here?
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+
+* Freundliche und hilfsbereite Community
+
+* Aufgeschlossen für neue Mitglieder und Technologien
+
+* Ein Zuhause für verwaiste Puppet-Module
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+
+* Freundliche und hilfsbereite Community
+
+* Aufgeschlossen für neue Mitglieder und Technologien
+
+* Ein Zuhause für verwaiste Puppet-Module
+
+* Ein Kollektiv aus einzelnen Entwicklern aufbauen
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+]
+
+.right-column[
+* Entwicklung vieler Puppet Module
+
+  * Und Ruby Gems!
+
+* Freundliche und hilfsbereite Community
+
+* Aufgeschlossen für neue Mitglieder und Technologien
+
+* Ein Zuhause für verwaiste Puppet-Module
+
+* Ein Kollektiv aus einzelnen Entwicklern aufbauen
+
+* Sicherstellung einer kontinuierlichen Weiterentwicklung
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We want to work together on modules
+* together we develop tooling to test our modules
+---
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+]
+
+.right-column[
+* Vox Pupuli Mitglieder in der GitHub Org
+
+![img](contributors.svg)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* 2021: 161 members in the GitHub org with merge access
+* now: 213
+
+* every dot marks a presentation about or related to vox pupuli
+* break even point erreicht? macht jetzt jeder cloud und terraform? oder serverless? oder nocode
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+]
+
+.right-column[
+* Viele Git Neulinge
+
+  * `git rebase` ist für viele eine Herausforderung
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+]
+
+.right-column[
+* Viele Git Neulinge
+
+  * `git rebase` ist für viele eine Herausforderung
+
+* Viele Menschen ohne Erfahrung mit Test Frameworks
+
+  * Interesse an RuboCop/puppet-lint/rspec-puppet/serverspec
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Those are the tools we use in our CI
+* talk about them later
+* CI runs automatically
+* CI does code annotations
+* People want to fix/enhance their code because CI feedback is quick and nice
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+]
+
+.right-column[
+* Viele Git Neulinge
+  * `git rebase` ist für viele eine Herausforderung
+
+* Viele Menschen ohne Erfahrung mit Test Frameworks
+  * Interesse an RuboCop/puppet-lint/rspec-puppet/serverspec
+
+* SRE/DevOps/Platform/Systems Engineers in kleinen Teams
+  * Nutzen Puppet im Betrieb und wollen öffentlichen Module nutzen
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* a team so tiny, often a single person
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+]
+
+.right-column[
+* Viele Git Neulinge
+  * `git rebase` ist für viele eine Herausforderung
+
+* Viele Menschen ohne Erfahrung mit Test Frameworks
+  * Interesse an RuboCop/puppet-lint/rspec-puppet/serverspec
+
+* SRE/DevOps/Platform/Systems Engineers in kleinen Teams
+  * Nutzen Puppet im Betrieb und wollen öffentlichen Module nutzen
+
+* Puppet Consultants patchen Module für Kunden
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We provide letter of recognitions or kinda an employment reference
+
+* fryher viele admins von legacy infra
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+]
+
+.right-column[
+* (Erfolgreiche) FOSS Projekte alleine maintainen ist schwer
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Who of you maintains a open source project
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+]
+
+.right-column[
+* (Erfolgreiche) FOSS Projekte alleine maintainen ist schwer
+
+  * Erfolgreich impliziert Dokumentation
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+]
+
+.right-column[
+* (Erfolgreiche) FOSS Projekte alleine maintainen ist schwer
+
+  * Erfolgreich impliziert Dokumentation
+
+* Mehr User &rarr; Mehr Bugreports and Feature Requests
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+]
+
+.right-column[
+* (Erfolgreiche) FOSS Projekte alleine maintainen ist schwer
+
+  * Erfolgreich impliziert Dokumentation
+
+* Mehr User &rarr; Mehr Bugreports and Feature Requests
+
+* Maintainer verlieren Interesse, fehlende Zeit, Burnout
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* if a single person maintains a project: the more users you have the more likely it is to burn out
+* remember earlier when I asked about abandoned software?
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+]
+
+.right-column[
+* (Erfolgreiche) FOSS Projekte alleine maintainen ist schwer
+
+  * Erfolgreich impliziert Dokumentation
+
+* Mehr User &rarr; Mehr Bugreports and Feature Requests
+
+* Maintainer verlieren Interesse, fehlende Zeit, Burnout
+
+* Vox Pupuli möchte dem Vorbeugen
+
+  * Mit einer großen Gruppe an Maintainern und effizientes Tooling
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* if a single person maintains a project: the more users you have the more likely it is to burn out
+* remember earlier when I asked about abandoned software?
+
+---
+
+class: center, middle, inverse
+
+# How does<br>Vox Pupuli work?
+
+???
+
+* now you might as yourself. this sounds amazing, how does it work? Glad you're asking
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+![img](flowchart.svg)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* who worked in a company with a similar complex org chart?
+* Who liked it?
+* Who prefers small/flat hierarchies?
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+![img](voxpupuli.svg)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* there is no real hierarchy
+* Vox Pupuli is one big group
+* we work with lazy consensus
+* If a decision needs to be made and there is no majority for any of the options, PMC will choose
+* people love to work in such an environment, it enables people
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* what else do people love about vox pupuli? Our styleguide
+
+* We are distributed around the world
+* From the beginning, we were in different timezones and people with different backgrounds
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Often it's possible to implement something in different ways
+* Or to format the code in different ways
+* we notice this during code reviews, we use PRs for every change/contribution
+* if something is unclear, we talk about it and document it afterwards
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+
+  * Es ist Okay Entscheidungen Rückgängig zu machen
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* This is a living document. new collaborators should read it. those people are awesome to spot (my) spelling issues, enhancements, stuff that doesnt make sense
+* review it for each new puppet version
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+
+  * Es ist Okay Entscheidungen Rückgängig zu machen
+
+* Vox Pupuli Styleguide: [voxpupuli.org/docs/reviewing_pr](https://voxpupuli.org/docs/reviewing_pr/)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* If you've a development team within your company, I recommend following this pattern
+* Write down your guidelines, publish them on the internet, interact with others
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+
+  * Es ist Okay Entscheidungen Rückgängig zu machen
+
+* Vox Pupuli Styleguide: [voxpupuli.org/docs/reviewing_pr](https://voxpupuli.org/docs/reviewing_pr/)
+
+* Unser Styleguide wurde von Puppet Inc adoptiert
+
+  * Er ist der Quasistandard im Puppet Ökosystem
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+* code best practice and style guide
+* Puppet/Perforce also has a styleguide, but it's lacking many details. Ours is an enhancement or addition
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+
+  * Es ist Okay Entscheidungen Rückgängig zu machen
+
+* Vox Pupuli Styleguide: [voxpupuli.org/docs/reviewing_pr](https://voxpupuli.org/docs/reviewing_pr/)
+
+* Unser Styleguide wurde von Puppet Inc adoptiert
+
+  * Er ist der Quasistandard im Puppet Ökosystem
+
+* Styleguides bringen einen Mehrwert wenn man ihn erzwingen kann
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Wouldnt it be nice if we could enforce this somehow? if we could verify if our code looks like the styleguide recommends it?
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Style Guide & Best Practices sind wichtig!
+
+  * Dokumentiert jede Diskussion und deren Ergebnis!
+
+  * Es ist Okay Entscheidungen Rückgängig zu machen
+
+* Vox Pupuli Styleguide: [voxpupuli.org/docs/reviewing_pr](https://voxpupuli.org/docs/reviewing_pr/)
+
+* Unser Styleguide wurde von Puppet Inc adoptiert
+
+  * Er ist der Quasistandard im Puppet Ökosystem
+
+* Styleguides bringen einen Mehrwert wenn man ihn erzwingen kann
+
+  * puppet-lint, RuboCop, metadata-json-lint
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* linters!
+* metadata-json-lint for json, RuboCop for ruby files, puppet-lint for puppet DSL
+* puppet-lint can be extended with plugins. one plugin for each specific entry in the styleguide
+
+* this makes reviews easier. as a contributor, you don't need to wait for feedback from us. there are tools that can tell you what's wrong. and in most cases how to fix it (autofix). People love that.
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Systeme sind wichtig!
+
+  * Schnelles Feedback, weniger Aufwand für Reviewer
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* I still fix bugs in other projects and notice that they don't have any tests or linting
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Systeme sind wichtig!
+
+  * Schnelles Feedback, weniger Aufwand für Reviewer
+
+* Code Annotations!
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* GitHub and GitLab support this. A linting/test tool can tell the CI system which line, which character violated a styleguide or broke a test
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Code Annotations (RuboCop)!
+
+![img](rubocop.png)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* example for RuboCop. tells you the line, what kind of violation and a link to documentation
+* turns out people love that!
+* this enables people to work on their own most of the time, with a very short feedback loop
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Code Annotations (RuboCop, puppet-lint)!
+
+![img](puppetlint.png)
+
+* Dokumentation für: Puppet Module [puppetmodule.info](https://puppetmodule.info/modules)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* we have the same feature for puppet-lint
+* what does it say? missing docs?
+* Remember when I earlier talked about documentation in a project?
+* In the puppet ecosystem you can add some inline comments and a tool called puppet-strings can generate documentation
+* We check during each CI run if the REFERENCE.md is up2date
+* many languages support it to generate documentation from code+inline docs. if yours does it, use it!
+* puppet forge will display the REFERENCE.md for each release
+* puppetmodule.info
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Code Annotations (RuboCop, puppet-lint, rspec-puppet)!
+
+![img](rspec.png)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* rspec-puppet is used for unit testing
+* note the operating system? keep that in mind?
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* Code Annotations (RuboCop, puppet-lint, rspec-puppet, Beaker)!
+
+![img](beaker.png)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Beaker macht acceptance testing
+
+---
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Systeme sind wichtig!
+
+* CI Systeme sollten so schnell wie möglich Feedback geben
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* who likes to wait 20 minutes for CI to get feedback? Only people that drink a lot of coffee and need a refill
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+![img](ciflow.svg)
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+We implemented this in github actions.
+* we start from quick checks to slower checks
+* first validate the code. puppet code, ruby code, if the syntax is valid
+* the linting and formatting. that's RuboCop/puppet-lint mentioned earlier
+* then we generate a CI matrix
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* `jq .requirements[0] metadata.json`
+
+```json
+{
+  "name": "puppet",
+  "version_requirement": ">= 7.0.0 < 9.0.0"
+}
+```
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* each puppet module contains a metadata.json
+* it lists the supported puppet versions
+* we get each major version and can generate CI jobs for each major version
+* makes implementing support for newer versions easy. bump metadata.json and watch CI
+* same pattern works in other languages, like python or ruby projects
+* dont hardcode this in your CI config.
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* `jq .requirements[0] metadata.json`
+
+```json
+{
+  "name": "puppet",
+  "version_requirement": ">= 7.0.0 < 9.0.0"
+}
+```
+
+* `jq .operatingsystem_support[0] metadata.json`
+
+```json
+{
+  "operatingsystem": "Debian",
+  "operatingsystemrelease": [
+    "11",
+    "12"
+  ]
+}
+```
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* We have a tool called beaker to spin up VMs/docker instances
+* generate one job per OS version per puppet version
+* remember earlier when we talked about being open to new technology? someone wanting to add support for a new operating system? add it to metadata.json and you get a new CI job
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* Doku: [github.com/voxpupuli/gha-puppet](https://github.com/voxpupuli/gha-puppet#puppet-github-actions)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+As mentioned, documentation is important, the whole setup is FOSS and runs on GitHub actions, can be ported to gitlab
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* Doku: [github.com/voxpupuli/gha-puppet](https://github.com/voxpupuli/gha-puppet#puppet-github-actions)
+
+* Wiederbenutzbarer GitHub Workflow
+
+```yaml
+name: CI
+
+on: pull_request
+
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  puppet:
+    name: Puppet
+    uses: voxpupuli/gha-puppet/.github/workflows/beaker.yml@v3
+```
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+just in case you develop modules on github, you can reuse our workflow
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* Doku: [github.com/voxpupuli/gha-puppet](https://github.com/voxpupuli/gha-puppet#puppet-github-actions)
+
+* Wiederbenutzbarer GitHub Workflow
+
+* Alle Checks und Tests können auch lokal ausgeführt werden [voxpupuli.org/docs/how_to_run_tests](https://voxpupuli.org/docs/how_to_run_tests/)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+---
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* CI Matrix Generator
+
+* Doku: [github.com/voxpupuli/gha-puppet](https://github.com/voxpupuli/gha-puppet#puppet-github-actions)
+
+* Wiederbenutzbarer GitHub Workflow
+
+* Alle Checks und Tests können auch lokal ausgeführt werden [voxpupuli.org/docs/how_to_run_tests](https://voxpupuli.org/docs/how_to_run_tests/)
+
+* Jedes Repository hat eine CONTRIBUTING.md
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+Thats a github feature. when you open a PR and the file is present, github will tell you about it
+
+---
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+
+* Jedes Projekt hat Boilerplate Dateien
+
+  * Rakefile, Verzeichnissstruktur, CONTRIBUTING.md
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+
+* Jedes Projekt hat Boilerplate Dateien
+
+  * Rakefile, Verzeichnissstruktur, CONTRIBUTING.md
+
+* `modulesync`; Open Source Projekt von Vox Pupuli
+
+* Templates + Konfigurationsdateien auf eine Liste von Git Repositorys anwenden
+
+
+* Quellcode: [github.com/voxpupuli/modulesync](https://github.com/voxpupuli/modulesync#modulesync)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* this is not puppet-specific, it can be used for every group of git repos with similar boilerplate code
+* it can automatically create GitLab/GitHub/GitHub Enterprise PRs, or just push branches
+* distributed as ruby gem
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### What?
+### Who?
+### Why?
+### How?
+]
+
+.right-column[
+* modulesync Configs: [github.com/voxpupuli/modulesync_config](https://github.com/voxpupuli/modulesync_config#modulesync-configs)
+![img](modulesync.png)
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+---
+
+class: center, middle, inverse
+
+# Fazit &<br/> Zusammenfassung
+
+---
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+
+* Entwickelt öffentlich, auch Firmencode
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+
+* Entwickelt öffentlich, auch Firmencode
+
+* Dokumentiert euren Styleguide
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* habt überhaupt einen stylgeguide
+* dokumentiert warum ihr euch für style X entschieden habt
+* bleibt möglichst nah am upstream styleguide
+* dokumentiert wenn ihr davon abweicht
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+
+* Entwickelt öffentlich, auch Firmencode
+
+* Dokumentiert euren Styleguide
+
+* Dokumentiert eure Projekte
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Ist die dokumentation gut genug das sich ein neuer mitarbeiter eigenständig einarbeiten kann?
+
+* Sind externe user, die nicht bei euch arbeiten, in der lage die doku zu finden und zu verstehen?
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+
+* Entwickelt öffentlich, auch Firmencode
+
+* Dokumentiert euren Styleguide
+
+* Dokumentiert eure Projekte
+
+* Minimiert Boilerplate Code
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+### Fazit
+]
+.right-column[
+
+* Dokumentiert wie euer Team arbeitet
+
+* Entwickelt öffentlich, auch Firmencode
+
+* Dokumentiert euren Styleguide
+
+* Dokumentiert eure Projekte
+
+* Minimiert Boilerplate Code
+
+* Verwaltet Boilerplate Code zentral
+
+]
+
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+---
+
+.left-column[
+## Vox Pupuli
+### Fazit
+### Kontakt
+]
+.right-column[
+* IRC: [Libera.Chat/#voxpupuli](https://web.libera.chat/?#voxpupuli)
+
+* Mailingliste: [voxpupuli@groups.io](mailto:voxpupuli@groups.io)
+
+* Feedback: [tim@bastelfreak.de](mailto:tim@bastelfreak.de)
+
+* Slideset und weitere Vorträge: <a href='https://github.com/bastelfreak/talks'>github.com/bastelfreak/talks</a>
+
+* Support Vox Pupuli via [GitHub sponsors](https://github.com/sponsors/voxpupuli) oder [OpenCollective](https://opencollective.com/vox-pupuli/)
+
+### Vielen Dank für eure Aufmerksamkeit!
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+* Danke betadots fürs sponsoring
+* wir stellen ein
+* supported vox pupuli
+
+---
+
+.left-column[
+## Vox Pupuli
+### Fazit
+### Kontakt
+### Link Sammlung
+]
+.right-column[
+* Unsere Website: [voxpupuli.org/docs/](https://voxpupuli.org/docs/)
+
+* CI Setup: [github.com/voxpupuli/gha-puppet](https://github.com/voxpupuli/gha-puppet#puppet-github-actions)
+
+* Unit Tests: [github.com/voxpupuli/voxpupuli-test](https://github.com/voxpupuli/voxpupuli-test#voxpupuli-test-gem)
+
+* Acceptance Tests: [github.com/voxpupuli/voxpupuli-acceptance](https://github.com/voxpupuli/voxpupuli-acceptance#voxpupuli-acceptance-gem)
+
+* Release Tooling: [github.com/voxpupuli/voxpupuli-release](https://github.com/voxpupuli/voxpupuli-release#vox-pupuli-release-gem)
+
+* modulesync_config: [github.com/voxpupuli/modulesync_config](https://github.com/voxpupuli/modulesync_config#modulesync-configs)
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+???
+
+
+???
+CI setup
+
+---
+
+count: false
+
+.left-column[
+## Vox Pupuli
+]
+
+.right-column[
+<img src="car.jpg" style="width:85%;">
+]
+<a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
+.footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
+
+    </textarea>
+    <script src="remark-latest.min.js"></script>
+    <script>
+      var slideshow = remark.create({
+        // Set the slideshow display ratio
+        // Default: '4:3'
+        // Alternatives: '16:9', ...
+        ratio: "16:9",
+        highlightStyle: "github"
+      });
+    </script>
+  </body>
+</html>
