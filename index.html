@@ -248,14 +248,14 @@
     <textarea id="source">
 class: center, middle, inverseold
 
-# Vox Pupuli - Wie man eine Open Source Community<br> aufbaut und lebendig hält
-
+# Vox Pupuli - Behind every successful open source project<br> is a vibrant community
 ---
 
 class: center, middle, inverseold
 
-# Vox Pupuli - Wie man eine Open Source Community<br> aufbaut und lebendig hält
-## Wie man eine Community auf über 210 Mitglieder und über 300 Projekte skaliert
+# Vox Pupuli - Behind every successful open source project<br> is a vibrant community
+
+## How to grow an online community to over 210 people managing over 300 projects
 
 ---
 
@@ -264,15 +264,11 @@ class: center, middle, inverseold
 
 * Tim 'bastelfreak' Meusel
 
-* Bei [Vox Pupuli](https://voxpupuli.org/) aktiv seit 2015
+* Merging stuff on [Vox Pupuli](https://voxpupuli.org/) since 2015
 
-* Für einen sehr kleinen lokalen Hoster gearbeitet
+* Senior IT Automation Consultant at [betadots](https://betadots.de/)
 
-* Vox Pupuli (PMC)
-
-* Wohnhaft in Köln
-
-* Senior IT Automation Consultant für [betadots](https://betadots.de/)
+* Puppet Solution Consultant
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 ???
@@ -283,7 +279,7 @@ class: center, middle, inverseold
 
 class: center, middle, inverse
 
-# Was ist<br/> Puppet?
+# What is<br/> Puppet?
 
 ???
 
@@ -314,7 +310,7 @@ count: false
 .right-column[
 * Infrastructure as Code (IaC) Software
 
-* Eigene deklarative Sprache, Puppet DSL
+* Brings its own declarative Language, Puppet DSL
 
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -333,9 +329,9 @@ count: false
 .right-column[
 * Infrastructure as Code (IaC) Software
 
-* Eigene deklarative Sprache, Puppet DSL
+* Brings its own declarative Language, Puppet DSL
 
-* Erfunden/entwickelt von Puppet Inc (jetzt Perforce)
+* Invented/Owned by Puppet Inc (acquired by Perforce)
 
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -353,12 +349,11 @@ count: false
 .right-column[
 * Infrastructure as Code (IaC) Software
 
-* Eigene deklarative Sprache, Puppet DSL
+* Brings its own declarative Language, Puppet DSL
 
-* Erfunden/entwickelt von Puppet Inc (jetzt Perforce)
+* Invented/Owned by Puppet Inc (acquired by Perforce)
 
-* Apache 2 Lizenz (mit CLA)
-
+* Apache-2.0 license (with CLA)
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 .footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
@@ -373,7 +368,7 @@ count: false
 ]
 
 .right-column[
-Beispiel Klasse für nginx
+example class to manage nginx:
 ```puppet
 \# @summary configures nginx in a bad way
 \# @param content the whole nginx config
@@ -410,12 +405,11 @@ class nginx (
 ]
 
 .right-column[
-* Ein oder mehrere Klassen bilden ein Puppet Modul
+* one or multiple classes are organised in a Puppet Module
 
-  * glorifiziertes .tar.gz Archiv
+  * glorified .tar.gz archive
 
-* Ähnlich eines Ruby Gems oder Python Paketes
-
+* similar to a Ruby gem or Python Package
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 .footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
@@ -433,15 +427,16 @@ count: false
 ]
 
 .right-column[
-* Ein oder mehrere Klassen bilden ein Puppet Modul
+* one or multiple classes are organised in a Puppet Module
 
-  * glorifiziertes .tar.gz Archiv
+  * glorified .tar.gz archive
 
-* Ähnlich eines Ruby Gems oder Python Paketes
+* similar to a Ruby gem or Python Package
 
-* Meistens lebt ein Modul in einem Git(Hub) Repo
+* Usually each Puppet Modules lives in its own Git(Hub) repository
 
-* Ein Modul verwaltet eine Software Komponente
+* A module is focussed on managing a specific software component
+
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 .footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
@@ -492,7 +487,7 @@ Now a question I will try to answer for you, what is vox pupuli
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -501,7 +496,8 @@ Now a question I will try to answer for you, what is vox pupuli
 ???
 
 Some stats. A group that:
-* 150 Puppet modules in 2021. 190 *active* modules at the moment
+* 150 Puppet modules in 2021. 179 *active* modules at the moment
+* 43 Ruby Gems in 2021, 54 *active* gems at the moment
 ---
 
 count: false
@@ -512,15 +508,16 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 ]
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
 .footnote[[@bastelsblog](https://twitter.com/bastelsblog) for [@voxpupuliorg](https://twitter.com/voxpupuliorg)]
 
 ???
 
+* 150 Puppet modules in 2021. 175 *active* modules at the moment
 * 43 Ruby Gems in 2021, 54 *active* gems at the moment
 ---
 count: false
@@ -531,11 +528,11 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 
-* Freundliche und hilfsbereite Community
+* Be helpful and polite to each other
 
 ]
 
@@ -558,13 +555,14 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 
-* Freundliche und hilfsbereite Community
+* Be helpful and polite to each other
 
-* Aufgeschlossen für neue Mitglieder und Technologien
+* Be open-minded to people and technology
+
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -589,15 +587,16 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 
-* Freundliche und hilfsbereite Community
+* Be helpful and polite to each other
 
-* Aufgeschlossen für neue Mitglieder und Technologien
+* Be open-minded to people and technology
 
-* Ein Zuhause für verwaiste Puppet-Module
+* Provide a home for orphaned Puppet modules
+
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -615,17 +614,17 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 
-* Freundliche und hilfsbereite Community
+* Be helpful and polite to each other
 
-* Aufgeschlossen für neue Mitglieder und Technologien
+* Be open-minded to people and technology
 
-* Ein Zuhause für verwaiste Puppet-Module
+* Provide a home for orphaned Puppet modules
 
-* Ein Kollektiv aus einzelnen Entwicklern aufbauen
+* Unite lonely module and tooling authors to a collective
 
 ]
 
@@ -643,19 +642,19 @@ count: false
 ]
 
 .right-column[
-* Entwicklung vieler Puppet Module
+* Maintain many many Puppet modules
 
-  * Und Ruby Gems!
+  * And Rubygems!
 
-* Freundliche und hilfsbereite Community
+* Be helpful and polite to each other
 
-* Aufgeschlossen für neue Mitglieder und Technologien
+* Be open-minded to people and technology
 
-* Ein Zuhause für verwaiste Puppet-Module
+* Provide a home for orphaned Puppet modules
 
-* Ein Kollektiv aus einzelnen Entwicklern aufbauen
+* Unite lonely module and tooling authors to a collective
 
-* Sicherstellung einer kontinuierlichen Weiterentwicklung
+* Ensure continued development for our code
 ]
 
 <a href='https://betadots.de' alt='company website betadots'><img src="logo-1181x1181.png" alt="drawing" style="position: fixed; bottom: 12px; left: 20px; width: 100px;"/></a>
@@ -673,7 +672,7 @@ count: false
 ]
 
 .right-column[
-* Vox Pupuli Mitglieder in der GitHub Org
+Members in the Vox Pupuli GitHub Org
 
 ![img](contributors.svg)
 ]
