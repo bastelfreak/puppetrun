@@ -57,7 +57,7 @@
  <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 1155,411 L 1305,411"/>
  <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 1155,411 L 1305,411"/>
  <path fill="none" stroke="rgb(179,179,179)" stroke-linejoin="round" d="M 1305,10415 L 1305,411"/>
- <path fill="none" stroke="rgb(0,69,134)" stroke-width="80" stroke-linejoin="round" d="M 1305,7213 L 2696,6132 4087,5892 5478,5533 6869,5373 8260,5213 9651,5053 11042,4733 12432,4693 13823,4372 15214,4132 16605,3972 17996,2972 19387,1971 20778,1771 22169,1891 23560,1851"/>
+ <path fill="none" stroke="rgb(0,69,134)" stroke-width="80" stroke-linejoin="round" d="M 1305,7213 L 2696,6132 4087,5892 5478,5533 6869,5373 8260,5213 9651,5053 11042,4733 12432,4693 13823,4372 15214,4132 16605,3972 17996,2972 19387,1971 20778,1771 22169,1891 23560,1811"/>
  <path fill="rgb(0,69,134)" stroke="none" d="M 1180,7088 L 1180,7338 1430,7338 1430,7088 1180,7088 Z"/>
  <path fill="none" stroke="rgb(0,69,134)" stroke-linejoin="round" d="M 1180,7088 L 1180,7338 1430,7338 1430,7088 1180,7088 Z"/>
  <path fill="rgb(0,69,134)" stroke="none" d="M 2571,6007 L 2571,6257 2821,6257 2821,6007 2571,6007 Z"/>
@@ -90,8 +90,8 @@
  <path fill="none" stroke="rgb(0,69,134)" stroke-linejoin="round" d="M 20653,1646 L 20653,1896 20903,1896 20903,1646 20653,1646 Z"/>
  <path fill="rgb(0,69,134)" stroke="none" d="M 22044,1766 L 22044,2016 22294,2016 22294,1766 22044,1766 Z"/>
  <path fill="none" stroke="rgb(0,69,134)" stroke-linejoin="round" d="M 22044,1766 L 22044,2016 22294,2016 22294,1766 22044,1766 Z"/>
- <path fill="rgb(0,69,134)" stroke="none" d="M 23435,1726 L 23435,1976 23685,1976 23685,1726 23435,1726 Z"/>
- <path fill="none" stroke="rgb(0,69,134)" stroke-linejoin="round" d="M 23435,1726 L 23435,1976 23685,1976 23685,1726 23435,1726 Z"/>
+ <path fill="rgb(0,69,134)" stroke="none" d="M 23435,1686 L 23435,1936 23685,1936 23685,1686 23435,1686 Z"/>
+ <path fill="none" stroke="rgb(0,69,134)" stroke-linejoin="round" d="M 23435,1686 L 23435,1936 23685,1936 23685,1686 23435,1686 Z"/>
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="675" y="10983"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2016-11</tspan></tspan></tspan></text>
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="2066" y="10983"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2017-10</tspan></tspan></tspan></text>
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3457" y="10983"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">2018-02</tspan></tspan></tspan></text>
