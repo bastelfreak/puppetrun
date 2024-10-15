@@ -1,9 +1,10 @@
-# Wie man eine Open Source Community aufbaut und lebendig hält
+# Vox Pupuli - Behind every successful open source project is a vibrant community
 
-* 45 minutes plus 15 minutes diѕcussion
-* Link zur Konferenz: [https://froscon.org/](https://programm.froscon.org/2024/events/3144.html)
-* Online Version: [bastelfreak.de/froscon2024/#1](https://bastelfreak.de/froscon2024/#1)
-* Git Repo: [github.com/bastelfreak/froscon2024](https://github.com/bastelfreak/froscon2024?tab=readme-ov-file#wie-man-eine-open-source-community-aufbaut-und-lebendig-h%C3%A4lt)
+* This is a talk about Vox Pupuli and how the community works
+* It was presented at the [puppet.run](https://puppet.run/) conference in English (initially planned in German)
+* 60 minutes plus 15 minutes diѕcussion
+* Online Version: [bastelfreak.de/puppetrun/#1](https://bastelfreak.de/puppetrun/#1)
+* Git Repo: [github.com/bastelfreak/puppetrun]()
 * Recording: [https://media.ccc.de/v/froscon2024-3144-wie_man_eine_open_source_community_aufbaut_und_lebendig_halt](https://media.ccc.de/v/froscon2024-3144-wie_man_eine_open_source_community_aufbaut_und_lebendig_halt)
 * PDF: [Vox Pupuli - Wie man eine Open Source Community aufbaut und lebendig hält.pdf](https://github.com/bastelfreak/talks/blob/master/Vox%20Pupuli%20-%20Wie%20man%20eine%20Open%20Source%20Community%20aufbaut%20und%20lebendig%20h%C3%A4lt.pdf)
 
