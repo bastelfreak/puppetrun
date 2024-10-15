@@ -6,7 +6,7 @@
 * Online Version: [bastelfreak.de/puppetrun/#1](https://bastelfreak.de/puppetrun/#1)
 * Git Repo: [github.com/bastelfreak/puppetrun](https://github.com/bastelfreak/puppetrun?tab=readme-ov-file#vox-pupuli---behind-every-successful-open-source-project-is-a-vibrant-community)
 * There is no recording available
-* PDF: [Vox Pupuli - Behind every successful open source project is a vibrant community.pdf](https://github.com/bastelfreak/talks/blob/master/Vox%20Pupuli%20-%20Wie%20man%20eine%20Open%20Source%20Community%20aufbaut%20und%20lebendig%20h%C3%A4lt.pdf)
+* PDF: [Vox Pupuli - Behind every successful open source project is a vibrant community.pdf](https://github.com/bastelfreak/puppetrun/blob/main/Vox%20Pupuli%20-%20Behind%20every%20successful%20open%20source%20project%20is%20a%20vibrant%20community.pdf)
 
 ## Abstract
 
