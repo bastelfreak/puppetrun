@@ -4,9 +4,9 @@
 * It was presented at the [puppet.run](https://puppet.run/) conference in English (initially planned in German)
 * 60 minutes plus 15 minutes diѕcussion
 * Online Version: [bastelfreak.de/puppetrun/#1](https://bastelfreak.de/puppetrun/#1)
-* Git Repo: [github.com/bastelfreak/puppetrun]()
-* Recording: [https://media.ccc.de/v/froscon2024-3144-wie_man_eine_open_source_community_aufbaut_und_lebendig_halt](https://media.ccc.de/v/froscon2024-3144-wie_man_eine_open_source_community_aufbaut_und_lebendig_halt)
-* PDF: [Vox Pupuli - Wie man eine Open Source Community aufbaut und lebendig hält.pdf](https://github.com/bastelfreak/talks/blob/master/Vox%20Pupuli%20-%20Wie%20man%20eine%20Open%20Source%20Community%20aufbaut%20und%20lebendig%20h%C3%A4lt.pdf)
+* Git Repo: [github.com/bastelfreak/puppetrun](https://github.com/bastelfreak/puppetrun?tab=readme-ov-file#vox-pupuli---behind-every-successful-open-source-project-is-a-vibrant-community)
+* There is no recording available
+* PDF: [Vox Pupuli - Behind every successful open source project is a vibrant community.pdf](https://github.com/bastelfreak/talks/blob/master/Vox%20Pupuli%20-%20Wie%20man%20eine%20Open%20Source%20Community%20aufbaut%20und%20lebendig%20h%C3%A4lt.pdf)
 
 ## Abstract
 
